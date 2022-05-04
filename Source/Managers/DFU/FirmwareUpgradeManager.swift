@@ -8,7 +8,7 @@ import Foundation
 import CoreBluetooth
 
 public class FirmwareUpgradeManager : FirmwareUpgradeController, ConnectionObserver {
-    private let imageManager: ImageManager
+    public private(set) var imageManager: ImageManager
     private let defaultManager: DefaultManager
     private let basicManager: BasicManager
     private weak var delegate: FirmwareUpgradeDelegate?
